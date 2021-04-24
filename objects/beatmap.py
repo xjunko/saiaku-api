@@ -23,7 +23,16 @@ class Beatmap:
 
   @classmethod
   async def from_mapset_id(cls, id: int):
-    ...
+    if (b := cls.from_cache(id)):
+      return b
+
+    if not (data := await cls.get_beatmap(s=id)):
+      return None
+
+    b = cls(data)
+    b.save_to_cache()
+
+    return b
 
   @classmethod
   async def from_beatmap_id(cls, id: int):
