@@ -1,12 +1,13 @@
-# TERRIBLE NOT GOOD AT ALL asynchronous OSU!V1 API!!!!!!
+## Portable osu! asynchronous-api-wrapper
 
-# How to fucking use
-* u dont
+This was made in less than an hour, not recommended for actual usage. <br/>
+Feel free to do whatever of it.
 
-# How to use (for real)
-* rename the folder to osu_api or something, im too lazy to setup the setup.py thing
-* import API
-* give it osu!token like
+
+## How to use
+
+* Turn the whole repo into a module, for this example I'll use `osu_api`
+
 ```py
 from osu_api import API
 
